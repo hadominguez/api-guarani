@@ -1,4 +1,4 @@
-# API-REST of Providers
+# API-REST of SIU-Guarani
 
 API-REST of SIU-Guarani developed with Swagger and PostgreSQL.
 
