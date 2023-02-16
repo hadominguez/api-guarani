@@ -1,5 +1,6 @@
 const proveedores = require('./routes/responsableAcademicaRoutes');
 const certificadoOtorgado = require('./routes/certificadoOtorgadoRoutes');
+const mailEnviado = require('./routes/mailEnviadoRecuperarPassRoutes');
 const path = require('path');
 const ConfigEnv = require('./config/config');
 
@@ -21,6 +22,6 @@ const swaggerSpec = {
 };
 
 module.exports = function (app){
-    app.use("/api", proveedores, certificadoOtorgado);
+    app.use("/api", proveedores, certificadoOtorgado, mailEnviado);
     app.use("/api-doc", swaggerUI.serve, swaggerUI.setup(swaggerJsDoc(swaggerSpec)));
 }
